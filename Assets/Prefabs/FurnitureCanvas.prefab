@@ -2842,7 +2842,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9194335145191503439, guid: f0f456487a157d340859cb4d1b768d24, type: 3}
         m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
-        m_MethodName: toggle
+        m_MethodName: WallArtsToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3139,6 +3139,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5109,7 +5121,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 777650134866291600, guid: 24744ae8e760b7c4b80722fbaedbbb7f, type: 3}
         m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
-        m_MethodName: toggle
+        m_MethodName: WallArtsToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19925,7 +19937,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -8241479018157262724, guid: 23113450458d2eb48b31b1df48aff975, type: 3}
         m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
-        m_MethodName: toggle
+        m_MethodName: WallArtsToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21322,6 +21334,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25731,7 +25755,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1550190515515840974, guid: 61f64767530b9ab43b0a214790246fad, type: 3}
         m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
-        m_MethodName: toggle
+        m_MethodName: WallArtsToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27385,7 +27409,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -2983540048741774789, guid: cdb54620f5d36e241b9fc710b02c8cfc, type: 3}
         m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
-        m_MethodName: toggle
+        m_MethodName: WallArtsToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

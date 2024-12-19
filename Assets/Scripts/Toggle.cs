@@ -5,6 +5,7 @@ public class Toggle : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private GameObject Spawner;
     private GameObject spawnedObject;
+    private WallArtsPlacement wallArts;
     private GameObject spawningObject;
     private MRUKCustomManager _MRUKManager;
     private MRUKRoom room;
@@ -14,6 +15,7 @@ public class Toggle : MonoBehaviour
     {
         Spawner = FindFirstObjectByType<Spawner>().gameObject;
         _MRUKManager = FindFirstObjectByType<MRUKCustomManager>();
+        wallArts=FindFirstObjectByType<WallArtsPlacement>();
         Debug.Log("Spawner is:" + Spawner.name);
         spawningObject = gameObject;
     }
@@ -34,9 +36,9 @@ public class Toggle : MonoBehaviour
         gameObject.SetActive(true);
         if (spawnedObject == null)
         {
-            spawnedObject = Instantiate(gameObject, Spawner.transform.position, Quaternion.identity);
+            spawnedObject = Instantiate(gameObject, Spawner.transform.position,Quaternion.identity);
             spawnedObject.SetActive(true);
-            CreateSpatialAnchor();
+            //CreateSpatialAnchor();
 
 
             //Debug.Log("Spawn Loop Starts here:");
@@ -51,7 +53,7 @@ public class Toggle : MonoBehaviour
         else
         {
             Debug.LogError("Destroyed");
-            DestroySpatialAnchor();
+           // DestroySpatialAnchor();
             Destroy(spawnedObject);
             spawnedObject = null;
 
@@ -80,6 +82,17 @@ public class Toggle : MonoBehaviour
     }
     public void WallArtsToggle()
     {
+        if (spawnedObject == null)
+        {
+            spawnedObject = Instantiate(gameObject, Spawner.transform.position, Quaternion.identity);
+            spawnedObject.SetActive(true);
+            wallArts.objectToPlace = spawnedObject;
+        }
+        else
+        {
+            Destroy(spawnedObject);
+            wallArts.objectToPlace = null;
+        }
         //if (room != null)
         //{
         //    MRUKAnchor closestKeyWall = room.GetKeyWall(out Vector2 surface,0.5f);

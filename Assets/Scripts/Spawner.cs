@@ -9,7 +9,11 @@ public class Spawner : MonoBehaviour
     private MRUKRoom room;
     [HideInInspector] public Vector3 safePosition;
     public float maxRayDistance = 10f;
-
+    private float fixedHeight; // Set your desired fixed height here
+    private void Start()
+    {
+        fixedHeight=transform.position.y;
+    }
     public void FindCenterSafePositionInRoom()
     {
         room = MRUK.Instance.GetCurrentRoom();
@@ -32,8 +36,14 @@ public class Spawner : MonoBehaviour
             if (hitCount > 0)
             {
                 safePosition = totalHitPoint / hitCount;
+
+                // Ensure the safe position maintains a fixed height (y-coordinate)
+                safePosition.y = fixedHeight;
+
+                // Set the object's position to the calculated safe position
                 transform.position = safePosition;
-                Debug.Log("Spawner positioned at the center of the room.");
+
+                Debug.Log("Spawner positioned at the center of the room at fixed height.");
             }
             else
             {

@@ -6,7 +6,7 @@ public class WallArtsPlacement : MonoBehaviour
 {
     public OVRHand _hand;
     public MRUKCustomManager _mrukManager;
-    public Transform handIndexFingerTip; 
+    public Transform handIndexFingerTip;
     public GameObject objectToPlace;
     public MRUKAnchor.SceneLabels labelFilters = MRUKAnchor.SceneLabels.WALL_FACE;
     private LineRenderer lineRenderer;
@@ -15,9 +15,9 @@ public class WallArtsPlacement : MonoBehaviour
     //private MRUKRoom room;
     private bool isPinching = false;
     //Pinch values
-    private float positionLerpSpeed = 5f;  
+    private float positionLerpSpeed = 5f;
     private float rotationLerpSpeed = 5f;
-    private float pinchHoldTime = 0.1f;  
+    private float pinchHoldTime = 0.1f;
     private float pinchTimer = 0f;
 
     private Vector3 targetPosition;
@@ -29,34 +29,44 @@ public class WallArtsPlacement : MonoBehaviour
             _mrukManager = FindFirstObjectByType<MRUKCustomManager>();
         }
 
-
-        lineRenderer=GetComponent<LineRenderer>();
+       
+        lineRenderer = GetComponent<LineRenderer>();
         if (lineRenderer != null)
         {
             lineRenderer.positionCount = 2;
         }
-        _panelGlow = objectToPlace.transform.Find("_panelGlow").gameObject;
+        lineRenderer.enabled = false;
+
     }
 
     void Update()
     {
-
+        if(objectToPlace != null)
+        {
+            _panelGlow = objectToPlace.transform.Find("_panelGlow").gameObject;
+        }
+        else
+        {
+            lineRenderer.enabled = false;
+        }
         Ray ray = new Ray(handIndexFingerTip.position, handIndexFingerTip.forward);
 
         if (_mrukManager._room != null)
         {
+            lineRenderer.enabled = true;
             bool hasHit = _mrukManager._room.Raycast(ray, 10, new LabelFilter(labelFilters), out RaycastHit hit, out MRUKAnchor anchor);
-            
-            if (hasHit)
+
+            if (hasHit && objectToPlace != null)
             {
+
                 if (lineRenderer != null)
                 {
-                    lineRenderer.SetPosition(0, ray.origin);    
-                    lineRenderer.SetPosition(1, hit.point);    
+                    lineRenderer.SetPosition(0, ray.origin);
+                    lineRenderer.SetPosition(1, hit.point);
                 }
                 targetPosition = hit.point;
                 targetRotation = Quaternion.LookRotation(hit.normal);
-                
+
                 if (isPinching)
                 {
                     ArtPositioning();
@@ -66,11 +76,11 @@ public class WallArtsPlacement : MonoBehaviour
                     _panelGlow.SetActive(true);
                     isPinching = true;
                 }
-                
+
                 else
                 {
                     _panelGlow.SetActive(false);
-                    isPinching=false;
+                    isPinching = false;
                 }
             }
         }
@@ -80,7 +90,7 @@ public class WallArtsPlacement : MonoBehaviour
     {
         bool didHitPanel = Physics.Raycast(GetRaycastRay(), out var hit) && (hit.transform.gameObject.layer == LayerMask.NameToLayer("Wall_Arts"));
 
-        
+
         _panelGlow.SetActive(didHitPanel);
         objectToPlace.transform.position = Vector3.Lerp(objectToPlace.transform.position, targetPosition, Time.deltaTime * positionLerpSpeed);
         objectToPlace.transform.rotation = Quaternion.Slerp(objectToPlace.transform.rotation, targetRotation, Time.deltaTime * rotationLerpSpeed);
