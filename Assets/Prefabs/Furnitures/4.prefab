@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 2230514618925968769}
   - component: {fileID: 2462216930812403656}
   - component: {fileID: 7802144832109357199}
-  m_Layer: 0
+  - component: {fileID: 2234383745785836788}
+  - component: {fileID: 2315731552092978515}
+  m_Layer: 7
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,14 +29,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6007020313258260226}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0.00000011920929, y: 1.0000001, z: -0.00000023841858}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 11.4345, y: 11.4345, z: 11.4345}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7345942482614229157}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &2230514618925968769
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,6 +112,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6692290496178104961, guid: 9492090208edacb4d8a1c819530751e1, type: 3}
+--- !u!114 &2234383745785836788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007020313258260226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1731821ff3442847a34a6bbcc346617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuidKey: 
+--- !u!54 &2315731552092978515
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007020313258260226}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &6537221984024386690
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +163,7 @@ GameObject:
   - component: {fileID: 7345942482614229157}
   - component: {fileID: 7282137539314440301}
   - component: {fileID: 100835135914996924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}

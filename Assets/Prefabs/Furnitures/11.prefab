@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8448417548856884640}
   - component: {fileID: 6747699667253898786}
   - component: {fileID: 3961698025080851295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Remesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6301215078604658418}
-  m_Layer: 0
+  - component: {fileID: 2652270787113715732}
+  - component: {fileID: -5500763785310006374}
+  m_Layer: 7
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,13 +137,53 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.258, y: 0, z: -0.9}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalScale: {x: 0.0020112, y: 0.0020112, z: 0.0020112}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8884199149980314323}
   - {fileID: 370185995919523042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2652270787113715732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580989949764375444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1731821ff3442847a34a6bbcc346617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuidKey: 
+--- !u!54 &-5500763785310006374
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580989949764375444}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &6734300305761015291
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +196,7 @@ GameObject:
   - component: {fileID: 411191199929506359}
   - component: {fileID: 2150630037267825157}
   - component: {fileID: 8499503638158192685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

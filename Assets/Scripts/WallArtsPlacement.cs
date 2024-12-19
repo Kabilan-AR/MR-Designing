@@ -9,8 +9,8 @@ public class WallArtsPlacement : MonoBehaviour
     public Transform handIndexFingerTip; 
     public GameObject objectToPlace;
     public MRUKAnchor.SceneLabels labelFilters = MRUKAnchor.SceneLabels.WALL_FACE;
-    private LineRenderer lineRenderer;     
-   
+    private LineRenderer lineRenderer;
+    private GameObject _panelGlow;
 
     //private MRUKRoom room;
     private bool isPinching = false;
@@ -35,18 +35,14 @@ public class WallArtsPlacement : MonoBehaviour
         {
             lineRenderer.positionCount = 2;
         }
-       
+        _panelGlow = objectToPlace.transform.Find("_panelGlow").gameObject;
     }
 
     void Update()
     {
-        // Ray from the index finger
+
         Ray ray = new Ray(handIndexFingerTip.position, handIndexFingerTip.forward);
 
-        
-        
-
-        // Ensure MRUK Room is not null
         if (_mrukManager._room != null)
         {
             bool hasHit = _mrukManager._room.Raycast(ray, 10, new LabelFilter(labelFilters), out RaycastHit hit, out MRUKAnchor anchor);
@@ -67,11 +63,13 @@ public class WallArtsPlacement : MonoBehaviour
                 }
                 if ((_hand != null && _hand.GetFingerIsPinching(OVRHand.HandFinger.Index)))
                 {
-                    isPinching = true;  // Start positioning the object
+                    _panelGlow.SetActive(true);
+                    isPinching = true;
                 }
                 
                 else
                 {
+                    _panelGlow.SetActive(false);
                     isPinching=false;
                 }
             }
@@ -80,8 +78,15 @@ public class WallArtsPlacement : MonoBehaviour
     }
     private void ArtPositioning()
     {
+        bool didHitPanel = Physics.Raycast(GetRaycastRay(), out var hit) && (hit.transform.gameObject.layer == LayerMask.NameToLayer("Wall_Arts"));
 
+        
+        _panelGlow.SetActive(didHitPanel);
         objectToPlace.transform.position = Vector3.Lerp(objectToPlace.transform.position, targetPosition, Time.deltaTime * positionLerpSpeed);
         objectToPlace.transform.rotation = Quaternion.Slerp(objectToPlace.transform.rotation, targetRotation, Time.deltaTime * rotationLerpSpeed);
+    }
+    private Ray GetRaycastRay()
+    {
+        return new Ray(handIndexFingerTip.position, handIndexFingerTip.forward);
     }
 }

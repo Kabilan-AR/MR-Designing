@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9174839581363422250}
   - component: {fileID: 1578896614898394498}
   - component: {fileID: 9167729628431984479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: buckle_Cube.007_plastic_buckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250570421865223859}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 3747269697599584419}
   - component: {fileID: 3264180117077803717}
   - component: {fileID: 1922079920995528023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: under_seat_joinery_Plane.009_black_metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,8 +136,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815489924221215390}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 1979730222154394793}
   - component: {fileID: 1913184194886017668}
   - component: {fileID: 6227027074352307489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leg_pillow_Cube.005__white_metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,8 +245,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020535827629050664}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 7523685750542871180}
   - component: {fileID: 8817594145025151273}
   - component: {fileID: 7423808069250051773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: belt_strap_BezierCurve_black_cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,8 +354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2186835126789800528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 927815560598108623}
   - component: {fileID: 9192106604933934906}
   - component: {fileID: 5976255869656072031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: buckle.001_Cube.010_plastic_buckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,8 +463,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2962681068593893935}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 7180649207409632023}
   - component: {fileID: 183476710557190887}
   - component: {fileID: 5256235882160417661}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: neck_pillow_Plane.007_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,8 +572,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3182548159230216172}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 6331780658145212276}
   - component: {fileID: 3803122521551435525}
   - component: {fileID: 4155429962638842206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: arm_rest_Cube.004_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,8 +681,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3912087259251879471}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 491479869149266678}
   - component: {fileID: 5098212214196001974}
   - component: {fileID: 5098937139674585100}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: height_adjuster_Cube.006__white_metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,8 +790,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3979482013742496585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 7122505956423148524}
   - component: {fileID: 4133201263186082689}
   - component: {fileID: 6257381190569516543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leg_pillow_Cube.005_black_cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,8 +899,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4072618096094956418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 4261060426781727264}
   - component: {fileID: 5052848616609941154}
   - component: {fileID: 1858005341944509056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: buckle.002_Cube.011_plastic_buckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,8 +1008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4448273631391951870}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 5865130099013949678}
   - component: {fileID: 3105441708320919617}
   - component: {fileID: 4593050693311057588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: legs_Cube.001_plastic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,8 +1117,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4914892786825259560}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 7377406843588414000}
   - component: {fileID: 3947211264734252662}
   - component: {fileID: 1147723346763079050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hinge_Cube.003_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,8 +1226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5885709561554455854}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 9097229524665746762}
   - component: {fileID: 3115588459122528668}
   - component: {fileID: 5521771218135488225}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: back_pillow_Cube.002_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,8 +1335,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6047380141007256853}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 8889016635489578804}
   - component: {fileID: 8254018206781532820}
   - component: {fileID: 5340074435012532831}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: whole_boundary_Plane.004_plastic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1444,8 +1444,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6974152037413984869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 1242649475594844144}
   - component: {fileID: 7079267384657903712}
   - component: {fileID: 2587935652174678585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chair_spine_Plane.003_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,8 +1553,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7261420749042188125}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 1706060202824592995}
   - component: {fileID: 2219702020817728936}
   - component: {fileID: 4969905541849571656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leg_pillow_Cube.005_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,8 +1662,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7618831071077188155}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1756,7 +1756,7 @@ GameObject:
   - component: {fileID: 1949251228393097293}
   - component: {fileID: 4263063459112662198}
   - component: {fileID: 7902065300587865182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: height_adjuster_Cube.006_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,8 +1771,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7762867360231661329}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1862,7 +1862,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8008666412056608851}
-  m_Layer: 0
+  - component: {fileID: 9087601914442363847}
+  - component: {fileID: -4629472154256304624}
+  m_Layer: 7
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1877,7 +1879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9118075962829599238}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.173, y: -0.407, z: -0.15}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
@@ -1902,6 +1904,46 @@ Transform:
   - {fileID: 3548399458321306148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9087601914442363847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118075962829599238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1731821ff3442847a34a6bbcc346617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuidKey: 
+--- !u!54 &-4629472154256304624
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118075962829599238}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &9203768882407272618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,7 +1956,7 @@ GameObject:
   - component: {fileID: 929925922353470245}
   - component: {fileID: 5838363884904693943}
   - component: {fileID: 537739221119441472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: seat_Plane.008_chair_material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1929,8 +1971,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9203768882407272618}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

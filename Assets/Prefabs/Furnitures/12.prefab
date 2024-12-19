@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 241928815939687169}
   - component: {fileID: 3567822693607655717}
-  m_Layer: 0
+  - component: {fileID: -8737989974878924438}
+  - component: {fileID: 8812769996218452714}
+  m_Layer: 7
   m_Name: 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.363, y: 0, z: -0.413}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.130879, y: 0.130879, z: 0.130879}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 641933578516708841}
@@ -57,6 +59,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.263273, y: 2.8862433, z: 4.7338824}
   m_Center: {x: 0.03541708, y: -0.10383711, z: 0.30545577}
+--- !u!114 &-8737989974878924438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421373949451744240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1731821ff3442847a34a6bbcc346617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuidKey: 
+--- !u!54 &8812769996218452714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421373949451744240}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &1844262937083306022
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +110,7 @@ GameObject:
   - component: {fileID: 4325229464357567776}
   - component: {fileID: 8885506198608552528}
   - component: {fileID: 7456358059976839956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pasted__sofabody2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +196,7 @@ GameObject:
   - component: {fileID: 8113744645633253424}
   - component: {fileID: 598346170208818552}
   - component: {fileID: 5645828740340849032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pasted__sofabuttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +282,7 @@ GameObject:
   - component: {fileID: 641933578516708841}
   - component: {fileID: 5709179849482397947}
   - component: {fileID: 6578140806636516291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pasted__sodametals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +368,7 @@ GameObject:
   - component: {fileID: 181657463802970113}
   - component: {fileID: 1344377573826924385}
   - component: {fileID: 8817050813086098941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pasted__sofalegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

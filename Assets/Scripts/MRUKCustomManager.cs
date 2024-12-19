@@ -1,11 +1,14 @@
 using UnityEngine;
 using Meta.XR.MRUtilityKit;
 using System.Collections;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class MRUKCustomManager : MonoBehaviour
 {
     //[HideInInspector] public MRUK _MRUK;
     [HideInInspector] public MRUKRoom _room;
+    [HideInInspector] public List<OVRSpatialAnchor> _spatialAnchors=new List<OVRSpatialAnchor>();
     void Start()
     {
         
@@ -26,5 +29,27 @@ public class MRUKCustomManager : MonoBehaviour
             yield return null;
         }
         _room=MRUK.Instance.GetCurrentRoom();
+    }
+    public void saveAllAnchors()
+    {
+        foreach(var anchors in _spatialAnchors)
+        {
+            StartCoroutine(waitForAnchorToLocalize(anchors));
+            anchors.Save((anchors, success) =>
+            {
+                if (success)
+                {
+                    Debug.Log("Anchor Saved:" + anchors.gameObject.name + "UUID is:" + anchors.Uuid);
+                }
+            });
+        }
+    }
+    private IEnumerator waitForAnchorToLocalize(OVRSpatialAnchor anchor)
+    {
+        while (!anchor.Created && !anchor.Localized)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
     }
 }

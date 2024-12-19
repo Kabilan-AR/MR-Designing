@@ -1,52 +1,90 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Oculus.Interaction.HandGrab;
+using Meta.XR.MRUtilityKit;
 
-public class PrefabHoverandSpawn : MonoBehaviour
+public class PrefabHoverAndSpawn : MonoBehaviour
 {
-    public GameObject _Object;         // Object prefab to place
-    public OVRHand rightHand;          // Reference to the right hand (set in inspector)
-
-    private GameObject _PreviewObject; // Preview object to display during placement
-    private bool isHoldingObject = false; // Track if we're holding an object
+    
+    public LayerMask furnitureLayerMask=7;  
+    public MRUKAnchor.SceneLabels roomLabelsToAvoid = MRUKAnchor.SceneLabels.TABLE | MRUKAnchor.SceneLabels.COUCH;  
+    public float objectOffsetFromFloor = 0.1f;
+    public Collider objectCollider;
+    public OVRHand hand;  
+    private bool isPlacing = false;
+    private MRUKRoom room;
+    private Vector3 placementPosition;
+    private Quaternion placementRotation;
 
     void Start()
     {
-        // Instantiate the preview object (inactive until grabbed)
-        _PreviewObject = Instantiate(_Object);
-        _PreviewObject.GetComponent<Renderer>().material.color = Color.green; // Preview color
-        _PreviewObject.SetActive(false);  // Initially hidden
+        // Initialize hand tracking
+        //hand = FindFirstObjectByType<OVRHand>();
+
     }
 
     void Update()
     {
-        // Detect if right hand is pinching (index finger)
-        bool isPinching = rightHand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        if(MRUK.Instance.IsInitialized)
+        {
+            room = MRUK.Instance.GetCurrentRoom();
+            if (isPlacing)
+            {
+                Ray handRay = new Ray(hand.PointerPose.position, Vector3.down);
+                if (Physics.Raycast(handRay, out RaycastHit hit, Mathf.Infinity))
+                {
+                    // Get position and rotation for placing the object
+                    placementPosition = hit.point + Vector3.up * objectOffsetFromFloor;
+                    placementRotation = Quaternion.LookRotation(hit.normal);
 
-        // If we are pinching (grabbing) and not yet holding an object
-        if (isPinching && !isHoldingObject)
-        {
-            isHoldingObject = true;
-            _PreviewObject.SetActive(true); // Show the preview object
+                    if (!IsCollidingWithOtherFurniture() && !IsCollidingWithRoomObjects(placementPosition))
+                    {
+                        transform.position = placementPosition;
+                        transform.rotation = placementRotation;
+                    }
+                    else
+                    {
+                        Debug.Log("Placement position collides with another object. Trying again...");
+                    }
+                }
+            }
+            if (hand.GetFingerIsPinching(OVRHand.HandFinger.Index) && isPlacing)
+            {
+                PlaceObject();
+            }
         }
-        // If we release the pinch and are holding an object
-        else if (!isPinching && isHoldingObject)
-        {
-            // Place the object in the world at the preview's current position and rotation
-            Instantiate(_Object, _PreviewObject.transform.position, _PreviewObject.transform.rotation);
-            isHoldingObject = false;
-            _PreviewObject.SetActive(false); // Hide preview after placing
-        }
-
-        // If currently holding an object, move it to the right hand's position
-        if (isHoldingObject)
-        {
-            MovePreviewWithHand();
-        }
+        
     }
 
-    private void MovePreviewWithHand()
+    // Begin placing the object
+    public void StartPlacing()
     {
-        // Move the preview object to follow the right hand's position and rotation
-        _PreviewObject.transform.position = rightHand.transform.position;
-        _PreviewObject.transform.rotation = rightHand.transform.rotation;
+        isPlacing = true;
     }
+
+    private void PlaceObject()
+    {
+        if (!IsCollidingWithOtherFurniture() && !IsCollidingWithRoomObjects(placementPosition))
+        {
+            Debug.Log("Object placed successfully.");
+            isPlacing = false;
+
+        }
+    }
+
+    private bool IsCollidingWithOtherFurniture()
+    {
+        Collider[] colliders = Physics.OverlapBox(objectCollider.bounds.center, objectCollider.bounds.extents, transform.rotation, furnitureLayerMask);
+        return colliders.Length > 0;
+    }
+
+    private bool IsCollidingWithRoomObjects(Vector3 position)
+    {
+        Ray ray = new Ray(position + Vector3.up * 0.5f, Vector3.down);
+        bool hasHit = room.Raycast(ray, 10f, new LabelFilter(roomLabelsToAvoid), out RaycastHit hit, out MRUKAnchor anchor);
+        return hasHit;
+    }
+
+
 }
