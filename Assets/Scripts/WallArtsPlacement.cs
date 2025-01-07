@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Meta.XR.MRUtilityKit;
+using NUnit.Framework;
+
 [RequireComponent(typeof(LineRenderer))]
 public class WallArtsPlacement : MonoBehaviour
 {
+    public Dictionary<int,List<OVRSpatialAnchor>> spatialAnchorDic;
     public OVRHand _hand;
     public MRUKCustomManager _mrukManager;
     public Transform handIndexFingerTip;

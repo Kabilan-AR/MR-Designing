@@ -8,7 +8,7 @@ public class MRUKCustomManager : MonoBehaviour
 {
     //[HideInInspector] public MRUK _MRUK;
     [HideInInspector] public MRUKRoom _room;
-    [HideInInspector] public List<OVRSpatialAnchor> _spatialAnchors=new List<OVRSpatialAnchor>();
+   public List<GameObject> _spatialAnchors=new List<GameObject>();
     void Start()
     {
         
@@ -19,10 +19,10 @@ public class MRUKCustomManager : MonoBehaviour
     {
         if(!MRUK.Instance.IsInitialized)
         {
-            StartCoroutine(WaitforMRUKInitialization());
+            StartCoroutine(WaitForMRUKInitialization());
         }
     }
-    private IEnumerator WaitforMRUKInitialization()
+    private IEnumerator WaitForMRUKInitialization()
     {
         while(!MRUK.Instance.IsInitialized)
         {
@@ -32,24 +32,50 @@ public class MRUKCustomManager : MonoBehaviour
     }
     public void saveAllAnchors()
     {
-        foreach(var anchors in _spatialAnchors)
+        foreach (GameObject obj in _spatialAnchors)
         {
-            StartCoroutine(waitForAnchorToLocalize(anchors));
-            anchors.Save((anchors, success) =>
+            Debug.Log(obj);
+            var anchor = obj.GetComponent<OVRSpatialAnchor>();
+            if (anchor == null)
             {
-                if (success)
-                {
-                    Debug.Log("Anchor Saved:" + anchors.gameObject.name + "UUID is:" + anchors.Uuid);
-                }
-            });
+                Debug.Log("Anchor added to:" + obj);
+                anchor = obj.AddComponent<OVRSpatialAnchor>();
+            }
+
+            // Ensure the anchor is localized before saving
+            StartCoroutine(waitForAnchorToLocalize(anchor));
         }
     }
+
     private IEnumerator waitForAnchorToLocalize(OVRSpatialAnchor anchor)
     {
+        // Wait until the anchor is localized
         while (!anchor.Created && !anchor.Localized)
         {
-            yield return new WaitForEndOfFrame();
+            yield return null; 
         }
 
+        // Save the anchor once localized
+        anchor.Save((anch, success) =>
+        {
+            if (success)
+            {
+                Debug.Log("Anchor Saved: " + anch.gameObject.name + " UUID is: " + anch.Uuid);
+            }
+            else
+            {
+                Debug.LogError("Failed to save anchor: " + anch.gameObject.name);
+            }
+        });
     }
+
+    public void discordAllAnchors()
+    {
+        foreach (GameObject obj in _spatialAnchors)
+        {
+            Destroy(obj.GetComponent<OVRSpatialAnchor>());
+        }
+       
+    }
+    
 }

@@ -4,7 +4,7 @@ public class Toggle : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private GameObject Spawner;
-    private GameObject spawnedObject;
+    [HideInInspector] public GameObject spawnedObject;
     private WallArtsPlacement wallArts;
     private GameObject spawningObject;
     private MRUKCustomManager _MRUKManager;
@@ -38,66 +38,35 @@ public class Toggle : MonoBehaviour
         {
             spawnedObject = Instantiate(gameObject, Spawner.transform.position,Quaternion.identity);
             spawnedObject.SetActive(true);
-            //CreateSpatialAnchor();
-
-
-            //Debug.Log("Spawn Loop Starts here:");
-            //foreach(var obj in _MRUKManager._spatialAnchors)
-            //{
-            //    Debug.Log("inside loop:" + obj.name);
-            //}
-            //Debug.Log("Spawn Loop Ends here.");
-
+            _MRUKManager._spatialAnchors.Add(spawnedObject);
         }
 
         else
         {
             Debug.LogError("Destroyed");
-           // DestroySpatialAnchor();
+            _MRUKManager._spatialAnchors.Remove(spawnedObject);
             Destroy(spawnedObject);
             spawnedObject = null;
-
-
-
-            //Debug.Log("Destroy Loop Starts here:");
-            //foreach (var obj in _MRUKManager._spatialAnchors)
-            //{
-            //    if (_MRUKManager._spatialAnchors.Count == 0) Debug.Log("nulllllll");
-            //    Debug.Log("inside loop:"+obj.name);
-            //}
-            //Debug.Log("Destroy Loop Ends here.");
         }
         gameObject.SetActive(false);
 
     }
-    private void CreateSpatialAnchor()
-    {
-        spawnedObject.AddComponent<OVRSpatialAnchor>();
-        _MRUKManager._spatialAnchors.Add(spawnedObject.GetComponent<OVRSpatialAnchor>());
-    }
-    private void DestroySpatialAnchor()
-    {
-        _MRUKManager._spatialAnchors.Remove(spawnedObject.GetComponent<OVRSpatialAnchor>());
-        Destroy(spawnedObject.GetComponent<OVRSpatialAnchor>());
-    }
+   
     public void WallArtsToggle()
     {
         if (spawnedObject == null)
         {
             spawnedObject = Instantiate(gameObject, Spawner.transform.position, Quaternion.identity);
             spawnedObject.SetActive(true);
+            _MRUKManager._spatialAnchors.Add( spawnedObject);
             wallArts.objectToPlace = spawnedObject;
         }
         else
         {
+            _MRUKManager._spatialAnchors.Remove(spawnedObject);
             Destroy(spawnedObject);
             wallArts.objectToPlace = null;
         }
-        //if (room != null)
-        //{
-        //    MRUKAnchor closestKeyWall = room.GetKeyWall(out Vector2 surface,0.5f);
-        //    gameObject.transform.position = new Vector3(surface.x, surface.y, gameObject.transform.position.z);
-        //    gameObject.transform.rotation= Quaternion.LookRotation(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z));
-        //}
+       
     }
 }
